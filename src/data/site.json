@@ -1,0 +1,41 @@
+{
+  "name": "MWS Assurance and Investment Group",
+  "shortName": "MWS Group",
+  "tagline": "Creating and Protecting Wealth",
+  "established": 2000,
+  "fspLicense": "5182",
+  "medicalSchemeBroker": "BR5694",
+  "url": "https://mwsgroup.co.za",
+  "email": "mark@mwsgroup.co.za",
+  "phone": "+27114222323",
+  "phoneDisplay": "011 422 2323",
+  "fax": "011 422 6245",
+  "whatsapp": "27829278431",
+  "address": {
+    "street": "PO Box 7163",
+    "suburb": "Westwood",
+    "city": "Johannesburg",
+    "postalCode": "1477",
+    "country": "South Africa"
+  },
+  "founder": {
+    "name": "Mark Spencer",
+    "title": "Registered Financial Planner",
+    "qualifications": ["RFP", "Certificate of Proficiency - Insurance Institute of South Africa"]
+  },
+  "social": {
+    "facebook": "",
+    "linkedin": "",
+    "twitter": ""
+  },
+  "navigation": [
+    { "label": "Home", "href": "/" },
+    { "label": "About", "href": "/#about" },
+    { "label": "Services", "href": "/#services" },
+    { "label": "Team", "href": "/#team" },
+    { "label": "Gallery", "href": "/#gallery" },
+    { "label": "News", "href": "/#news" },
+    { "label": "Contact", "href": "/#contact" }
+  ],
+  "ogImage": "/images/og-default.jpg"
+}

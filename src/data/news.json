@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Planning for a Secure Retirement in South Africa",
+    "date": "2025-11-15",
+    "excerpt": "With only 6% of South Africans retiring financially independent, early planning is essential. Here's how to secure your future.",
+    "image": "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&q=80",
+    "category": "Retirement"
+  },
+  {
+    "id": 2,
+    "title": "Understanding Your Life Insurance Needs",
+    "date": "2025-09-20",
+    "excerpt": "Life insurance provides liquidity for your beneficiaries. Learn what coverage amount is right for your family.",
+    "image": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80",
+    "category": "Insurance"
+  },
+  {
+    "id": 3,
+    "title": "Tax-Efficient Investing in South Africa",
+    "date": "2025-07-10",
+    "excerpt": "Retirement annuities, endowments, and tax-free savings accounts offer significant tax advantages for South African investors.",
+    "image": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=80",
+    "category": "Investments"
+  }
+]

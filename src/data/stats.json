@@ -1,0 +1,11 @@
+[
+  {
+    "title": "Retirement Statistics in South Africa",
+    "stats": [
+      { "value": "31", "suffix": "%", "label": "Forced to Continue Working" },
+      { "value": "47", "suffix": "%", "label": "Dependent on Family" },
+      { "value": "16", "suffix": "%", "label": "Dependent on State Pension" },
+      { "value": "6", "suffix": "%", "label": "Retire Financially Independent" }
+    ]
+  }
+]

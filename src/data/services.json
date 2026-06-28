@@ -1,0 +1,59 @@
+[
+  {
+    "id": "life-disability",
+    "title": "Life, Disability & Business Insurance",
+    "icon": "Shield",
+    "description": "Cost-effective life insurance guaranteeing liquidity for beneficiaries. Disability cover paid in lump sum or monthly. Business insurance covering shareholder agreements and key person protection.",
+    "link": "/life-insurance",
+    "features": [
+      "Life insurance with lump sum payouts",
+      "Disability cover – lump sum or monthly",
+      "Income protection (tax deductible premiums)",
+      "Business insurance: buy & sell agreements",
+      "Key person insurance",
+      "Dreaded disease cover"
+    ]
+  },
+  {
+    "id": "retirement",
+    "title": "Retirement Planning & Wills",
+    "icon": "CalendarCheck",
+    "description": "Comprehensive retirement planning including company-owned provident and pension funds. Professional will drafting and estate planning services.",
+    "link": "/retirement",
+    "features": [
+      "Retirement annuity planning",
+      "Company provident and pension funds",
+      "Will drafting and estate planning",
+      "Preservation funds",
+      "Living annuities"
+    ]
+  },
+  {
+    "id": "investments",
+    "title": "Local & Offshore Investments",
+    "icon": "BarChart3",
+    "description": "Tax-efficient investment products including retirement annuities, endowments, and unit trusts. Local and offshore investment options administered by FSB-approved institutions.",
+    "link": "/investments",
+    "features": [
+      "Unit trusts (local and offshore)",
+      "Endowment policies (tax-free after 5–10 years)",
+      "Lump sum and monthly investment plans",
+      "Retirement annuities with tax benefits",
+      "Offshore investment products"
+    ]
+  },
+  {
+    "id": "medical",
+    "title": "Medical Schemes",
+    "icon": "HeartPulse",
+    "description": "Private medical cover options tailored to your healthcare needs. Accredited healthcare broker with the Council for Medical Schemes.",
+    "link": "/medical",
+    "features": [
+      "Private medical scheme options",
+      "Hospital plans",
+      "Comprehensive medical cover",
+      "Gap cover recommendations",
+      "Scheme switching assistance"
+    ]
+  }
+]
