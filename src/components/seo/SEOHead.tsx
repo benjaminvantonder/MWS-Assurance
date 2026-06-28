@@ -19,6 +19,8 @@ export function SEOHead({
   schema,
 }: SEOHeadProps) {
   const fullTitle = title ? `${title} | ${site.shortName}` : `${site.name} | Established 2000`
+  const baseUrl = url.replace(/\/$/, '')
+  const ogImageUrl = image.startsWith('http') ? image : `${baseUrl}${image}`
 
   return (
     <Helmet>
@@ -30,18 +32,18 @@ export function SEOHead({
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={url} />
-      <meta property="og:image" content={image} />
+      <meta property="og:image" content={ogImageUrl} />
       <meta property="og:site_name" content={site.name} />
       <meta property="og:locale" content="en_US" />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
+      <meta name="twitter:image" content={ogImageUrl} />
 
       <meta name="application-name" content={site.shortName} />
       <meta name="apple-mobile-web-app-title" content={site.shortName} />
-      <meta name="theme-color" content="#0a0a0a" />
+      <meta name="theme-color" content="#ffffff" />
 
       {schema && (
         <script type="application/ld+json">{JSON.stringify(schema)}</script>

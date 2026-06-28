@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 import site from '@/data/site.json'
 import { cn } from '@/utils/cn'
@@ -6,6 +7,8 @@ import { cn } from '@/utils/cn'
 export function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const location = useLocation()
+  const isHome = location.pathname === '/' || location.pathname === ''
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50)
@@ -24,6 +27,11 @@ export function Header() {
     }
   }
 
+  const getNavHref = (href: string) => {
+    if (href.startsWith('/#')) return isHome ? href : `/#${href.slice(2)}`
+    return '#/'
+  }
+
   return (
     <header
       className={cn(
@@ -32,7 +40,7 @@ export function Header() {
       )}
     >
       <div className="container-narrow flex items-center justify-between h-16 md:h-20">
-        <a href="/" className="flex items-center gap-3 group">
+        <Link to="/" className="flex items-center gap-3 group">
           <div className="w-9 h-9 rounded-full bg-gradient-to-br from-gold-600 to-gold-800 flex items-center justify-center text-white font-bold text-sm shadow-sm">
             M
           </div>
@@ -47,27 +55,42 @@ export function Header() {
               Established 2000
             </span>
           </div>
-        </a>
+        </Link>
 
         <nav className="hidden md:flex items-center gap-1">
-          {site.navigation.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              onClick={(e) => {
-                e.preventDefault()
-                handleNavClick(item.href)
-              }}
-              className={cn(
-                'px-4 py-2 text-sm rounded-lg transition-colors',
-                scrolled
-                  ? 'text-[#78716c] hover:text-[#1c1917] hover:bg-black/[0.04]'
-                  : 'text-[#78716c] hover:text-[#1c1917] hover:bg-black/[0.04]'
-              )}
-            >
-              {item.label}
-            </a>
-          ))}
+          {site.navigation.map((item) =>
+            item.href === '/' ? (
+              <Link
+                key={item.label}
+                to="/"
+                className={cn(
+                  'px-4 py-2 text-sm rounded-lg transition-colors',
+                  scrolled
+                    ? 'text-[#78716c] hover:text-[#1c1917] hover:bg-black/[0.04]'
+                    : 'text-[#78716c] hover:text-[#1c1917] hover:bg-black/[0.04]'
+                )}
+              >
+                {item.label}
+              </Link>
+            ) : (
+              <a
+                key={item.label}
+                href={getNavHref(item.href)}
+                onClick={(e) => {
+                  e.preventDefault()
+                  handleNavClick(item.href)
+                }}
+                className={cn(
+                  'px-4 py-2 text-sm rounded-lg transition-colors',
+                  scrolled
+                    ? 'text-[#78716c] hover:text-[#1c1917] hover:bg-black/[0.04]'
+                    : 'text-[#78716c] hover:text-[#1c1917] hover:bg-black/[0.04]'
+                )}
+              >
+                {item.label}
+              </a>
+            )
+          )}
         </nav>
 
         <button
@@ -87,19 +110,30 @@ export function Header() {
         style={{ animationFillMode: 'both' }}
       >
         <div className="container-narrow py-4 flex flex-col gap-1">
-          {site.navigation.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              onClick={(e) => {
-                e.preventDefault()
-                handleNavClick(item.href)
-              }}
-              className="px-4 py-3 text-[#78716c] hover:text-[#1c1917] hover:bg-black/[0.03] rounded-lg transition-colors"
-            >
-              {item.label}
-            </a>
-          ))}
+          {site.navigation.map((item) =>
+            item.href === '/' ? (
+              <Link
+                key={item.label}
+                to="/"
+                onClick={() => setMobileOpen(false)}
+                className="px-4 py-3 text-[#78716c] hover:text-[#1c1917] hover:bg-black/[0.03] rounded-lg transition-colors"
+              >
+                {item.label}
+              </Link>
+            ) : (
+              <a
+                key={item.label}
+                href={getNavHref(item.href)}
+                onClick={(e) => {
+                  e.preventDefault()
+                  handleNavClick(item.href)
+                }}
+                className="px-4 py-3 text-[#78716c] hover:text-[#1c1917] hover:bg-black/[0.03] rounded-lg transition-colors"
+              >
+                {item.label}
+              </a>
+            )
+          )}
         </div>
       </div>
     </header>

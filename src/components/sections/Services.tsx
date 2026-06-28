@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { Shield, CalendarCheck, BarChart3, HeartPulse } from 'lucide-react'
 import { FadeInView } from '@/components/animations/FadeInView'
 import { SectionTitle } from '@/components/ui/SectionTitle'
@@ -23,7 +24,7 @@ export function Services() {
             const Icon = iconMap[service.icon]
             return (
               <FadeInView key={service.id} delay={100 * i}>
-                <a href={service.link} className="block group">
+                <Link to={service.link} className="block group">
                   <div className="card p-6 md:p-8 gradient-border">
                     <div className="flex flex-col md:flex-row items-start gap-4 md:gap-5">
                       <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-gold-500/10 flex items-center justify-center shrink-0 group-hover:bg-gold-500/15 transition-all duration-500">
@@ -47,7 +48,7 @@ export function Services() {
                       </div>
                     </div>
                   </div>
-                </a>
+                </Link>
               </FadeInView>
             )
           })}
